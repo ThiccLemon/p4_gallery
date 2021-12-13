@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p4_gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-049">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-427">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-066">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-079">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-106">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-173">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-343">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-3199">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-682">
+<link rel="stylesheet" href="https://scp-wiki.wikidot.com/scp-096">
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    Font-size: 32px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+   :root{
+      --negro: #212529;
+      --m_osc: #240046;
+      --morado: #5a189a;
+      --m_claro: #9d4edd;
+      --blanco:#ffffff ;
+      --negrita: 700;
+      
+    }
+    a{
+        font-family: 'Noto Sans Mono', monospace;
+        text-align: center;
+        text-decoration-color: rgb(173, 7, 160);
+        color: var(--morado);
+        display: flex;
+        flex-direction: column;
+        font-size: 80%;
+        text-decoration-style: double;
+    }
+   h1{
+    font-family: 'Special Elite', cursive;
+    font-size: 3em;
+   }
+   h2{
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 1em;
+    color: var(--m_claro);
+   }
+   header{
+     background-color: var(--negro);
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   h3{
+       font-family: 'Special Elite', cursive;
+       color: var(--blanco);
+   }
+   h4{
+       font-family:'Noto Sans Mono', monospace; 
+       color: var(--negro);
+   }
+   section{
+       height: 100%;
+   }
+   footer{
+        height: 50vh;
+        background-color: var(--negro);
+        color: white;
+        height: 100%;
+   }
+   #A{
+       background-color: var(--morado);
+   }
+   #A .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   #A .container h3{
+       width: 100%;
+   }
+   #B{
+       background-color: var(--m_osc);
+   }
+   #B .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   #B .container{
+       width: 100%;
+   }
+   #C{
+       background-color: var(--m_claro);
+   }
+   #C .container{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+   .cover{
+       padding: 1.2em;
+       margin: 0.5em;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;       
+       flex-wrap: wrap;
+       width: 300px;
+       max-height: 450px;
+       background-color: rgb(151, 20, 202);
+   }
+    .cover header{
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+        align-items: flex-end;
+        flex-grow: 1em;
+        background-color: rgb(255, 0, 119);
+    }
+    .cover_img{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .cover_img img{
+        flex-grow: 1;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    .cover h4{
+        font-family: 'Special Elite', cursive;
+        font-size: 0.5em;
+        color: var(--negro);
+    }
+    .lvl{
+       padding: 1.2em;
+       margin: 0.5em;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;       
+       flex-wrap: wrap;
+       width: 300px;
+       max-height: 450px;  
+       background-color: rgb(151, 20, 202);
+   }
+    .lvl header{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: flex-end;
+        flex-grow: 0.5em;
+        background-color: rgb(255, 0, 119);
+    }
+    .lvl h4{
+        font-family: 'Special Elite', cursive;
+        font-size: 0.5em;
+        color: var(--negro);
+    }
+    .fnd{
+       padding: 1.2em;
+       margin: 0.5em;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;       
+       flex-wrap: wrap;
+       width: 100%;
+       max-height: 100%;  
+   }
+   .fnd_img{
+       display: flex;
+       flex-grow: 1;
+
+   }
+    
+    .fnd_img img{
+        width: 10em;
+        max-height: 100%;
+    }
+    .fnd h4{
+        font-family: 'Special Elite', cursive;
+        font-size: 0.5em;
+        color: var(--negro);
+    }
+   .container{
+       padding: 0 2em;
+   }
+   body>header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+    background-color: var(--negro);
+   }
+
+
+
+   .rainbow-bg{
+        border-radius: 50%;
+		animation: rainbow-bg 10s linear;
+		animation-iteration-count: infinite;
+        }
+   @keyframes rainbow-bg{
+		100%,0%{
+			background-color: rgb(255,0,0);
+		}
+		8%{
+			background-color: rgb(255,127,0);
+		}
+		16%{
+			background-color: rgb(255,255,0);
+		}
+		25%{
+			background-color: rgb(127,255,0);
+		}
+		33%{
+			background-color: rgb(0,255,0);
+		}
+		41%{
+			background-color: rgb(0,255,127);
+		}
+		50%{
+			background-color: rgb(0,255,255);
+		}
+		58%{
+			background-color: rgb(0,127,255);
+		}
+		66%{
+			background-color: rgb(0,0,255);
+		}
+		75%{
+			background-color: rgb(127,0,255);
+		}
+		83%{
+			background-color: rgb(255,0,255);
+		}
+		91%{
+			background-color: rgb(255,0,127);
+		}
+}
+
+
+.rainbow {
+    font-size: 8em;
+  animation: colorRotate 6s linear 0s infinite;
+}
+.rainbow2 {
+  animation: colorRotate 6s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <hgroup>
+            <div id="shadowBox">
+
+                <h3 class="rainbow">S.C.P</h3>
+              
+            </div>
+        <h2>Secure.Contain.Protect.</h2>
+         <nav>
+             <a href="#A">SCPs </a>
+             <a href="#B">PELIGRO</a>
+             <a href="#C">FUNDACIÓN</a>
+         </nav>
+        </hgroup>
+        </div>
+    </header>
+    <main>
+        <section id="A">
+            <h3>SCPs</h3>
+            <div class="container">
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-049"><img src="SCP/SCP-049.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-049</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-427"><img src="SCP/SCP-427.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-427</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-066"><img src="SCP/SCP-066.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-066</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-079"><img src="SCP/SCP-079.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-079</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-096"><img src="SCP/SCP-096.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-096</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-106"><img src="SCP/SCP-106.jpg" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-106</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-173"><img src="SCP/SCP-173.png" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-173</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-3199"><img src="SCP/SCP-3199.jpg" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-3199</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-343"><img src="SCP/SCP-343.jpg" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-343</h4>
+                </header>
+            </div>
+            <div class="cover">
+                <div class="cover_img">
+                    <a href="https://scp-wiki.wikidot.com/scp-682"><img src="SCP/SCP-682.jpg" alt=""></a>
+                </div> 
+                <header>
+                <h4>SCP-682</h4>
+                </header>
+            </div>
+        </div>
+        </section>
+        <section id="B">
+            <h3>Niveles de Peligro</h3>
+            <div class="container">
+                <div class="lvl">
+                    <div class="lvl_img">
+                        <img src="danger/safe.jpg" alt="">
+                    </div>
+          
+                </div>
+                <div class="lvl">
+                    <div class="lvl_img">
+                        <img src="danger/euclid.jpg" alt="">
+                    </div>
+      
+                </div>
+                <div class="lvl">
+                    <div class="lvl_img">
+                        <img src="danger/keter.jpg" alt="">
+                    </div>
+  
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="C">
+        <h3>Fundación</h3>
+        <div class="container">
+            <div class="fnd">
+                <div class='demo rainbow-bg'>
+                <div class="fnd_img">
+                    <a href="https://scp-wiki.wikidot.com/"><img src="instalaciones/SCP_Foundation_.png" alt=""></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
